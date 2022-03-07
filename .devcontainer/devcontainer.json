@@ -1,0 +1,19 @@
+{
+  "name": "cdk-and-sam",
+  "image": "mcr.microsoft.com/vscode/devcontainers/base:debian-11",
+  "workspaceMount": "source=${localWorkspaceFolder},target=${localWorkspaceFolder},type=bind",
+  "extensions": [
+    "amazonwebservices.aws-toolkit-vscode",
+  ],
+  "features": {
+    "node": {
+      "version": "lts"
+    },
+    "docker-from-docker": {
+      "version": "latest"
+    }
+  },
+  "remoteUser": "vscode",
+  "workspaceFolder": "${localWorkspaceFolder}",
+  "postCreateCommand": "bash ./.devcontainer/postCreateCommand.sh"
+}
