@@ -1,15 +1,19 @@
 {
   "name": "cdk-and-sam",
-  "image": "mcr.microsoft.com/vscode/devcontainers/base:debian-11",
+  "image": "mcr.microsoft.com/devcontainers/base:debian",
   "workspaceMount": "source=${localWorkspaceFolder},target=${localWorkspaceFolder},type=bind",
-  "extensions": [
-    "amazonwebservices.aws-toolkit-vscode",
-  ],
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "amazonwebservices.aws-toolkit-vscode"
+      ]    
+    }
+  },
   "features": {
-    "node": {
+    "ghcr.io/devcontainers/features/node:1": {
       "version": "lts"
     },
-    "docker-from-docker": {
+    "ghcr.io/devcontainers/features/docker-from-docker:1": {
       "version": "latest"
     }
   },
