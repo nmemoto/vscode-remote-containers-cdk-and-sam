@@ -18,7 +18,7 @@ export class AppStack extends Stack {
     const fn = new Function(this, `${this.stackName}-Function`, {
       functionName: `${this.stackName}-Function`,
       code: Code.fromAsset('./lambda/my_function'),
-      runtime: Runtime.NODEJS_14_X,
+      runtime: Runtime.NODEJS_16_X,
       handler: "index.handler",
       timeout: cdk.Duration.seconds(3),
     })
